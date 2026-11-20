@@ -1,0 +1,85 @@
+{
+    "project_title": "Adult Census Income Classification",
+    "task_type": "classification",
+    "target_column": "income_above_50k",
+    "best_model_name": "LogisticRegression",
+    "numeric_features": [
+        "age",
+        "education_num",
+        "capital_gain",
+        "hours_per_week"
+    ],
+    "categorical_features": [
+        "workclass",
+        "education",
+        "marital_status",
+        "occupation",
+        "sex"
+    ],
+    "feature_ranges": {
+        "age": {
+            "min": 18,
+            "max": 75,
+            "default": 45,
+            "dtype": "int"
+        },
+        "education_num": {
+            "min": 4,
+            "max": 16,
+            "default": 10,
+            "dtype": "int"
+        },
+        "capital_gain": {
+            "min": 0,
+            "max": 15000,
+            "default": 7771,
+            "dtype": "int"
+        },
+        "hours_per_week": {
+            "min": 20,
+            "max": 70,
+            "default": 46,
+            "dtype": "int"
+        }
+    },
+    "categorical_options": {
+        "workclass": [
+            "Private",
+            "Self-emp-not-inc",
+            "Local-gov",
+            "State-gov",
+            "Federal-gov"
+        ],
+        "education": [
+            "Bachelors",
+            "HS-grad",
+            "Some-college",
+            "Masters",
+            "Doctorate",
+            "Assoc-voc"
+        ],
+        "marital_status": [
+            "Married-civ-spouse",
+            "Never-married",
+            "Divorced",
+            "Separated"
+        ],
+        "occupation": [
+            "Exec-managerial",
+            "Prof-specialty",
+            "Craft-repair",
+            "Adm-clerical",
+            "Sales",
+            "Tech-support"
+        ],
+        "sex": [
+            "Male",
+            "Female"
+        ]
+    },
+    "metrics": {
+        "accuracy": 0.9333,
+        "f1_score": 0.8929,
+        "roc_auc": 0.974
+    }
+}
